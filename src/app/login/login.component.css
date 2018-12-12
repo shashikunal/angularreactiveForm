@@ -1,0 +1,7 @@
+.username.ng-invalid.ng-touched {
+    border: 1px solid red;
+}
+
+.username.ng-touched.ng-valid{
+    border:1px solid green;
+}
