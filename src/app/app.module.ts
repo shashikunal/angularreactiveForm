@@ -13,12 +13,14 @@ import { ContactComponent } from './contact/contact.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { RegisterComponent } from './register/register.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AddtopicComponent } from './addtopic/addtopic.component';
 const Router: Routes = [
       {path:'' , component:HomeComponent},
       {path:'about' , component:AboutComponent},
       {path:'contact' , component:ContactComponent},
       {path:'login' , component:LoginComponent},
       {path:'register' , component:RegisterComponent},
+      {path:'addtopic' , component:AddtopicComponent},
       {path:'**' , component:PagenotfoundComponent}
 
     ];
@@ -33,7 +35,8 @@ const Router: Routes = [
     AboutComponent,
     ContactComponent,
     PagenotfoundComponent,
-    RegisterComponent
+    RegisterComponent,
+    AddtopicComponent
   ],
   imports: [
     BrowserModule,
