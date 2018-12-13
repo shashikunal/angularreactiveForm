@@ -8,36 +8,25 @@ import { FormGroup, FormControl, FormArray } from '@angular/forms';
 })
 export class AddtopicComponent implements OnInit {
 
-form = new FormGroup({
-  topics : new FormArray([])
-});
+  form = new FormGroup({
+    topics : new FormArray([])
+  }); //init of formGroup and formArray
 
-getTopics(topic:HTMLInputElement){
-  this.topics.push(new FormControl(topic.value));
-}
+  addTopics(topic:HTMLInputElement){
+    this.topics.push(new FormControl(topic.value));
+    topic.value = "";
 
-get topics(){
-  return this.form.get('topics')as FormArray;
-}
+  } //add Topics
 
-  // form = new FormGroup({
-  //   topics : new FormArray([])
-  // });
-
-  // addTopics(topic:HTMLInputElement){
-  //   this.topics.push(new FormControl(topic.value));
-  //   topic.value = "";
-
-  // }
+  get topics(){
+    return this.form.get('topics') as FormArray;
+  } //this getter method
 
 
-  // get topics(){
-  //   return this.form.get('topics') as FormArray;
-  // }
-  // removeTopic(topic){
-  //   let index = this.topics.controls.indexOf(topic);
-  //   this.topics.removeAt(index)
-  // }
+  removeTopic(topic){
+    let index = this.topics.controls.indexOf(topic);
+    this.topics.removeAt(index)
+  } // remove Topics
   
   constructor() { }
 
